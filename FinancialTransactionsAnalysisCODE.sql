@@ -240,25 +240,6 @@ ORDER BY
 
 ---------------------------------------------------------------------------------
 
-
-/* Transaction Frequency by Income Group */
-SELECT 
-    cd.[Income Group],
-    COUNT(td.[Transaction ID]) AS [Transaction Frequency]
-FROM 
-    [customer_demographics$] cd
-JOIN 
-    [account_information$] ai ON cd.[Customer ID] = ai.[Customer ID]
-JOIN 
-    [transaction_details$] td ON ai.[Account ID] = td.[Account ID]
-GROUP BY 
-    cd.[Income Group]
-ORDER BY 
-    cd.[Income Group];
-
-
----------------------------------------------------------------------------------
-
 /*Transaction Type Frequency Analysis*/
 WITH TransactionCounts AS (
     SELECT 
@@ -292,6 +273,26 @@ FROM
     RankedTransactions
 WHERE 
     Rank = 1;
+
+
+
+---------------------------------------------------------------------------------
+
+
+/* Transaction Frequency by Income Group */
+SELECT 
+    cd.[Income Group],
+    COUNT(td.[Transaction ID]) AS [Transaction Frequency]
+FROM 
+    [customer_demographics$] cd
+JOIN 
+    [account_information$] ai ON cd.[Customer ID] = ai.[Customer ID]
+JOIN 
+    [transaction_details$] td ON ai.[Account ID] = td.[Account ID]
+GROUP BY 
+    cd.[Income Group]
+ORDER BY 
+    cd.[Income Group];
 
 
 ---------------------------------------------------------------------------------
