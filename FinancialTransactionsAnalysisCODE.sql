@@ -331,36 +331,3 @@ GROUP BY [Product Type];
     ) td_inner
     JOIN customer_demographics$ cd_inner ON td_inner.[Account ID] = cd_inner.[Customer ID]
     GROUP BY cd_inner.[Income Group]
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
