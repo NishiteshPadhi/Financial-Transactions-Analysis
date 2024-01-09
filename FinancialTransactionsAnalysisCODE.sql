@@ -152,7 +152,7 @@ JOIN (
 
 ---------------------------------------------------------------------------------
                              
-							 /* Data Analysis */
+		             /* Data Analysis */
 
 
 -- Uncover Spending Patterns
@@ -294,7 +294,7 @@ WHERE
     Rank = 1;
 
 
-
+---------------------------------------------------------------------------------
 
 
 --Customer Segments by Income and Region:
